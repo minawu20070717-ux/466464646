@@ -1,0 +1,30 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #05050a; /* 極致深黑 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#game-container {
+    width: 640px;  /* 嚴格限制容器寬度 */
+    height: 480px; /* 嚴格限制容器高度 */
+    box-shadow: 0 0 35px rgba(0, 242, 254, 0.4); /* 霓虹青色外發光 */
+    border: 2px solid #00f2fe;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+}
+
+/* 修正 p5.js 自動產生的畫布定位問題 */
+#game-container canvas {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
